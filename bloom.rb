@@ -12,11 +12,12 @@ index1 = d1.hex % set.length
 index2 = d2.hex % set.length
 index3 = d3.hex % set.length
 
-puts index1
-puts index2
-puts index3
+#puts index1
+#puts index2
+#puts index3
 
 set[index1] = 1
-set[index2] = 2
-set[index3] = 3
+set[index2] = 1
+set[index3] = 1
 
+p set
