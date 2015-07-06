@@ -1,3 +1,3 @@
 require 'digest'
 
-Digest::MD5.hexdigest("yo")
+Digest::MD5.hexdigest("yo ")
