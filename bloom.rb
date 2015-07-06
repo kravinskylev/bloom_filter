@@ -81,7 +81,6 @@ class BloomFilter
     digest(element)
     modulate
     binary
-    print @set
   end
 
   def digest(element)
@@ -97,9 +96,11 @@ class BloomFilter
   end
 
   def binary
-    @set | "#{@index1}".to_i(2)
-    @set | "#{@index2}".to_i(2)
-    @set | "#{@index3}".to_i(2)
+    value1 = @set | "#{@index1}".to_i(2)
+    value2 = @set | "#{@index2}".to_i(2)
+    value3 = @set | "#{@index3}".to_i(2)
+    set = value1.to_s + value2.to_s + value3.to_s
+    print set + "\n"
   end
 
   def presence?(element)
@@ -114,3 +115,4 @@ end
 
 bf = BloomFilter.new
 bf.add("wow")
+bf.presence?("nope")
