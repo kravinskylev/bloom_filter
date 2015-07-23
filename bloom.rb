@@ -1,5 +1,5 @@
 require "digest"
-
+# brett rules
 class BloomFilter
   attr_accessor :element, :set
 
